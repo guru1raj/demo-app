@@ -8,7 +8,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 git branch:'main',
-                    url:'https://github.com/Ankith0505/Maven-project.git'
+                    url:'https://github.com/guru1raj/demo-app.git'
             }
         }
         stage('Build') {
@@ -40,7 +40,7 @@ pipeline {
             emailext (
                 subject: "SUCCESS: ${JOB_NAME} #${BUILD_NUMBER}",
                 body: "Build succeeded!\nCheck: ${BUILD_URL}",
-                to: "ankithshetty0505@gmail.com"
+                to: "bkgururaj123@gmail.com"
             )
         }
 
@@ -48,7 +48,7 @@ pipeline {
             emailext (
                 subject: "FAILED: ${JOB_NAME} #${BUILD_NUMBER}",
                 body: "Build failed!\nCheck: ${BUILD_URL}",
-                to: "ankithshetty0505@gmail.com"
+                to: "bkgururaj123@gmail.co"
             )
         }
         
